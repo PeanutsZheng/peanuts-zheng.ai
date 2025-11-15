@@ -1,0 +1,141 @@
+.Draw {
+    /* Catppuccin Latte Crust */
+    font-family: "ComicShannsMono Nerd Font Propo";
+    /* Catppuccin Latte Text */
+    color: #4c4f69;
+    background-color: #eff1f5;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100vh - 200px);
+    box-sizing: border-box;
+}
+
+.inputs {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.prompts-input-area {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.image-input-area {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.prompts-input-area textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccd0da;
+    background-color: #e6e9ef;
+    color: #4c4f69;
+    font-family: "ComicShannsMono Nerd Font Propo", monospace;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    caret-color: #4c4f69;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccd0da;
+    background-color: #e6e9ef;
+    color: #4c4f69;
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#generateBtn {
+    width: 200px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #7287fd;
+    color: #eff1f5;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 1.5rem;
+    align-self: center;
+}
+
+#generateBtn:hover {
+    background-color: #4054f0;
+    transform: translateY(-2px);
+}
+
+#generateBtn:active {
+    transform: translateY(0);
+}
+
+#generateBtn:disabled {
+    background-color: #bcc0cc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Large image viewer */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}

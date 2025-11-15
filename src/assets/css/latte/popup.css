@@ -1,0 +1,57 @@
+/* Latte */
+/* Multi message popup */
+.popup-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Single message popup */
+.popup-message-item {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    /* background-color: #4c4f69; */
+    background-color: rgba(76, 79, 105, 0.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    color: #eff1f5;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    width: auto;
+    text-align: center;
+    position: relative;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-message-item.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.popup-message-item .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+    line-height: 1;
+}
+
+.popup-message-item .popup-close:hover {
+    color: #fff;
+}
+
+.popup-message-item .popup-message-text {
+    margin: 0;
+    font-size: 14px;
+    padding-right: 15px;
+}

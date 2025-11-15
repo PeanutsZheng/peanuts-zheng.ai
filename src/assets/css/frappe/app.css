@@ -1,0 +1,116 @@
+/* Frappe */
+.App {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    /* Catppuccin Frappe Text */
+    color: #c6d0f5;
+    /* Catppuccin Frappe Base */
+    background-color: #303446;
+    font-size: 12pt;
+    margin: 0;
+    padding: 5px;
+    height: 100vh - 50px;
+    border-radius: 5px;
+}
+
+.header {
+    /* Catppuccin Frappe Mantle */
+    background-color: #292c3c;
+    /* Catppuccin Frappe Pink */
+    color: #f4b8e4;
+    padding: 2pt;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header h2 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.themeBtn {
+    -webkit-app-region: no-drag;
+    background-color: #f4b8e4;
+    /* Catppuccin Latte Text */
+    color: #c6d0f5;
+    border: none;
+    cursor: pointer;
+    border-right: 1px solid #acb0be;
+    border-radius: 7px;
+    margin-top: 15pt;
+    width: 30pt;
+    height: 30pt;
+}
+
+.themeBtn:hover {
+    background-color: #DB7093;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 150px);
+    min-height: 500px;
+}
+
+.menu {
+    /* Catppuccin Frappe Mantle */
+    background-color: #292c3c;
+    /* Catppuccin Frappe Text */
+    color: #f4b8e4;
+    text-align: center;
+    padding: 5pt;
+    font-size: 16pt;
+    width: 12%;
+    flex-shrink: 0;
+    /* Catppuccin Frappe Surface2 */
+    border-right: 1px solid #737994;
+    border-radius: 15px;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    color: #f4b8e4;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 5px 0;
+}
+
+.menu-item:hover {
+    background-color: #FFB6C1;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.menu-item.router-link-active {
+    background-color: #DB7093;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(136, 57, 239, 0.3);
+}
+
+.content {
+    width: 88%;
+    /* Catppuccin Frappe Base */
+    background-color: #303446;
+}
+
+.footer {
+    /* Catppuccin Frappe Mantle */
+    background-color: #292c3c;
+    /* Catppuccin Frappe Surface2 */
+    color: #737994;
+    padding: 10pt;
+    text-align: center;
+    /* Catppuccin Frappe Surface2 */
+    border-top: 1px solid #737994;
+}

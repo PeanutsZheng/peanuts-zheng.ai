@@ -1,0 +1,174 @@
+.CtrlPanel {
+    position: fixed;
+    top: 100px;
+    right: -240px;
+    width: 300px;
+    height: 100vh;
+    /* background-color: #303446; */
+    background-color: rgba(48, 52, 70, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: none;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.CtrlPanel.show {
+    transform: translateX(-240px);
+}
+
+.CtrlPanel:not(.show) {
+    transform: translateX(0);
+}
+
+.CtrlPanel #toggleCtrlBtn {
+    padding: 9px 10px;
+    background-color: #f4b8e4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.CtrlPanel #toggleCtrlBtn :hover {
+    background-color: #b88fed;
+}
+
+.CtrlPanel .ctrl-content {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    gap: 15px;
+}
+
+.CtrlPanel.collapsed .ctrl-content {
+    visibility: hidden;
+}
+
+.CtrlPanel:not(.collapsed) .ctrl-content {
+    visibility: visible;
+}
+
+.CtrlPanel .ctrl-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.CtrlPanel .sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: #414559;
+    border: 1px solid #51576d;
+    border-right: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CtrlPanel .ctrl-widget {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CtrlPanel .ctrl-widget textarea {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #51576d;
+    border-radius: 4px;
+    background-color: #292c3c;
+    color: #c6d0f5;
+}
+
+.CtrlPanel .ctrl-widget select {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #51576d;
+    border-radius: 4px;
+    background-color: #292c3c;
+    color: #c6d0f5;
+}
+
+.CtrlPanel .ctrl-widget input[type="text"] {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    width: 90%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.CtrlPanel .ctrl-widget input[type="number"] {
+    width: 40%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "ComicShannsMono Nerd Font Propo";
+    font-size: 14px;
+    margin: 0 auto !important;
+    display: block;
+}
+
+.CtrlPanel .ctrl-widget input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background: #51576d;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+}
+
+.CtrlPanel .ctrl-widget label {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    margin-bottom: 4px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    color: #c6d0f5;
+}
+
+.CtrlPanel .ctrl-widget button {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    padding: 10px 15px;
+    background-color: #8caaee;
+    color: #292c3c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: center;
+}
+
+.CtrlPanel .ctrl-container button:hover {
+    background-color: #7ca9ec;
+}
+
+.slider-value {
+    position: absolute;
+    background: #333;
+    color: c6d0f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 1001;
+    pointer-events: none;
+}

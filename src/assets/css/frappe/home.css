@@ -1,0 +1,20 @@
+.Home {
+    font-family: "ComicShannsMono Nerd Font Propo";
+    /* Catppuccin Frappe Text */
+    color: #c6d0f5;
+    /* Catppuccin Frappe Base */
+    background-color: #303446;
+    text-align: center;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #f4b8e4;
+    text-decoration: none;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
